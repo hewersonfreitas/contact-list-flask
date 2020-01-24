@@ -1,0 +1,53 @@
+{% extends 'index.html' %}
+
+{% block title %} Formulário {% endblock %}
+
+
+{% block table_result %}
+<div class="row jumbotron jumbotron-fluid mt-5 px-5">
+    <div class="container">
+      <h1 class="display-4">Lista Telefônica</h1>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in list_rows %}
+                <tr>
+                    <td>{{ row.name }}</td>
+                    <td>{{ row.email }}</td>
+                    <td>{{ row.telephone }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>  
+    </div>
+</div>
+{% endblock %}
+
+{% block form_list %}
+<div class="row">
+	<div class="col-md-7 offset-md-2">
+        <form method="POST" action="/register">
+            <div class="form-group">
+                <label for="name">Nome Completo</label>
+                <input name="name" type="text" placeholder="Insira seu nome" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="telephone">Telefone</label>
+                <input name="telephone" type="tel" id="phone-number" placeholder="Insira seu Telefone" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input name="email" type="email" placeholder="Insira seu E-mail" class="form-control" required>
+            </div>
+            <button class="btn btn-block btn-success" type="submit">Cadastrar</button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}
