@@ -7,15 +7,15 @@ Pequena aplicação exemplificando uma lista telefônica.
 Iniciando ambiente virtual em Python
 
 ```sh
-python -m venv contatct-list-flask
+$ python -m venv contatct-list-flask
 
-. ./contact-list-flask/bin/activate
+$ . ./contact-list-flask/bin/activate
 ```
 
 Instalado as dependencias do projeto
 
 ```sh
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 Vamos executar os comandos abaixo partindo que esteja no diretório raiz onde fez o clone do projeto.
@@ -23,22 +23,22 @@ Vamos executar os comandos abaixo partindo que esteja no diretório raiz onde fe
 Definindo variaveis de ambiente:
 
 ```sh
-export FLASK_APP=app
-export FLASK_ENV=Development
-export FLASK_DEBUG=True
+$ export FLASK_APP=app
+$ export FLASK_ENV=Development
+$ export FLASK_DEBUG=True
 ```
 
 Executando migrate do banco SQLite:
 
 ```sh
-flask db init
-flask db migrate
-flask db upgrade
+$ flask db init
+$ flask db migrate
+$ flask db upgrade
 ```
 
 Executando o projeto: 
 ```sh
-flask run
+$ flask run
 ```
 
 Acesse o projeto através do endereço:
